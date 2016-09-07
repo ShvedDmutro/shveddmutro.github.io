@@ -1,0 +1,30 @@
+{
+    "isLoading": false,
+    "noData": false,
+    "person": {
+        "name": "Shved Dmytro",
+        "dob": "05/11/1997",
+        "email": "shveddmutro@gmail.com",
+        "jobTitle": "Lead Front End Developer",
+        "photo": "/app/media/photo.png",
+        "phone": "+4915207286263"
+    },
+    "social": {
+        "facebook": "https://www.facebook.com/shved.dmytro",
+        "linkedin": "https://de.linkedin.com/in/dmytro-shved-6462b732",
+        "twitter": "https://twitter.com/ShvedDmutro",
+        "instagram": "https://www.instagram.com/shveddmutro/",
+        "github": "https://github.com/ShvedDmutro"
+    },
+    "navigation": [
+        {"title": "Profile", "type": "profile"},
+        {"title": "Resume", "type": "resume"},
+        {"title": "Blog", "type": "blog"},
+        {"title": "Contact", "type": "contact"}
+    ],
+    "copyright": "Copyright © 2016 All right reserved",
+    "profile": {
+        "title": "Profile",
+        "subTitle": "A Brief About Me"
+    }
+}

@@ -1,0 +1,52 @@
+// ------------------------------------
+//  Footer styles
+// ------------------------------------
+
+.footer {
+    line-height: 36px;
+    padding: 17px 0;
+    border-top: 1px solid @grayC6;
+
+    .footer-item {
+        display: inline-block;
+        margin: 0 20px;
+    }
+
+    a {
+        color: @black;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+            color: @blueDark;
+
+            &:hover {
+                .icon {
+                    color: @white;
+
+                    &-gray {
+                        background-color: @blueLight;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        color: @grayC6;
+        float: right;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        text-align: center;
+
+        .footer-item {
+            display: block;
+            margin: 0;
+        }
+
+        .copyright {
+            float: none;
+        }
+    }
+}

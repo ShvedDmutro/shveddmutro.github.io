@@ -1,0 +1,99 @@
+// ------------------------------------
+//  Navigation styles
+// ------------------------------------
+
+.menu {
+    padding: 48px 0;
+    text-align: center;
+
+    .menu-item {
+        display: inline-block;
+        width: 170px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .photo {
+        display: block;
+    }
+
+    .name {
+        text-underline: none;
+        margin-top: 13px;
+        display: block;
+        color: @black;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: @screen-sm-max) {
+        .menu-item {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.nav-item-box {
+    display: inline-block;
+    margin: 0 20px 20px;
+    cursor: pointer;
+
+    .txt {
+        display: block;
+        padding-top: 10px;
+        color: @black;
+        font-size: 18px;
+    }
+
+    &.contact {
+        color: @blueLighter;
+    }
+
+    &.resume {
+        color: @blueGreen;
+    }
+
+    &.blog {
+        color: @orangeDirty;
+
+        .nav-icon {
+            font-size: 75px;
+            padding-top: 24px;
+        }
+    }
+
+    &.profile {
+        color: @pinkDark;
+
+        .nav-icon {
+            font-size: 75px;
+            padding-top: 24px;
+        }
+    }
+
+    &.small {
+        margin: 0;
+
+        .nav-icon {
+            width: 70px;
+            height: 70px;
+            font-size: 35px;
+            padding-top: 5px;
+        }
+    }
+}
+
+.nav-icon {
+    width: 170px;
+    height: 170px;
+    border: 1px solid @grayD6;
+    background-color: @grayF5;
+    font-size: 65px;
+    padding-top: 32px;
+    text-align: center;
+    .border-radius(50%);
+}

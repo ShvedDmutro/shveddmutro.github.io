@@ -1,0 +1,108 @@
+// ------------------------------------
+// Header Styles
+// ------------------------------------
+
+.header {
+    border-bottom: 1px solid @grayC6;
+    padding: 30px 0;
+
+    .title {
+        font-size: 38px;
+        font-weight: 600;
+        margin: 5px 0 0;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    &-home {
+        border-bottom-color: @grayED;
+        padding: 45px 0;
+
+        .title-home {
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .sub-title {
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .photo-box {
+            border-right: 1px solid @grayED;
+        }
+    }
+
+    .photo {
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+        width: 232px;
+        height: 232px;
+        overflow: hidden;
+        display: inline-block;
+
+        img {
+            width: 232px;
+            height: 232px;
+        }
+    }
+
+    .nav-item-box {
+        float: left;
+        margin-right: 25px !important;
+    }
+
+    .close-btn {
+        line-height: 1;
+        a {
+            color: @grayC6;
+            font-size: 64px;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .photo {
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &-home {
+            text-align: center;
+
+            .title {
+                margin-top: 0;
+            }
+
+            .photo-box {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.btn-close {
+    width: 36px;
+    height: 36px;
+    margin-top: 16px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
