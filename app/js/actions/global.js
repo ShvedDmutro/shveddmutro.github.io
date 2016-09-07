@@ -7,13 +7,13 @@ const updateStoreData = (data) => ({
 
 const fetchData = () =>
     (dispatch) => {
-        const request = fetch('/app/data/data.json');
+        const request = fetch('/data/data.json');
         request
             .then(response => response.json())
             .then((json) => {
                 setTimeout(() => {
                     dispatch(updateStoreData(json));
-                }, 500);
+                }, 300);
             });
         return request;
     };

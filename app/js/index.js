@@ -23,7 +23,7 @@ ReactDOM.render(
         <Router history={ history }>
             <Route component={ App }>
                 <Route path="/" component={ HomePage } />
-                <Route path="profile" component={ ProfilePage } />
+                <Route path="/profile" component={ ProfilePage } />
             </Route>
         </Router>
     </Provider>,

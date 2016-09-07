@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 exports.devServer = function(options) {
     return {
@@ -242,6 +243,14 @@ exports.testStyles = function (options) {
                 files: "**/*.less",
                 failOnError: false
             })
+        ]
+    }
+};
+
+exports.copyFromTo = function (arr) {
+    return {
+        plugins: [
+            new CopyWebpackPlugin(arr)
         ]
     }
 };

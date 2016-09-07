@@ -59,7 +59,11 @@ switch (npmCommand) {
             parts.extractCSS(PATHS.css),
             parts.purifyCSS([PATHS.src]),
             parts.babel([PATHS.src]),
-            parts.minify()
+            parts.minify(),
+            parts.copyFromTo([
+                { from: 'data', to: 'data' },
+                { from: 'media', to: 'media' }
+            ])
         );
         break;
 
@@ -73,7 +77,8 @@ switch (npmCommand) {
             parts.setupLess(PATHS.less),
             parts.devServer({
                 host: PATHS.host,
-                port: PATHS.port
+                port: PATHS.port,
+                publicPath: 'http://localhost:8080/build/'
             }),
             parts.babelHot([PATHS.src]),
             parts.fonts([PATHS.fonts]),
