@@ -43,6 +43,80 @@ h3 {
     margin: 12px 0;
 }
 
+.content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .title {
+        font-weight: 600;
+        margin: 0 0 15px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-weight: 300;
+    }
+}
+
+.block-grey {
+    background-color: @grayFD;
+    border: 1px solid @grayDF;
+    padding: 20px 25px;
+
+    &-b {
+        padding-bottom: 0;
+    }
+
+    .desc {
+        padding: 8px 8px 0;
+    }
+}
+
+.table {
+    &.no-borders {
+        td, th {
+            border: 0;
+        }
+    }
+
+    .col1 {
+        width: 73%;
+    }
+
+    .col2 {
+        width: 88%;
+    }
+
+    margin-bottom: 0;
+}
+
+.btn {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0px 20px;
+    line-height: 38px;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 10px;
+
+    &-color {
+        border-color: @blue;
+        background-color: @blueLight;
+        color: @white;
+    }
+
+    &:hover {
+        color: @white;
+        background-color: @blue;
+    }
+
+    &:focus,
+    &:active {
+        color: @white;
+        outline: 0;
+    }
+}
+
 .isLoading {
     &::before {
         content: '';
@@ -60,9 +134,62 @@ h3 {
     }
 }
 
+.controls {
+    margin-top: 20px;
+    padding: 0 6px;
+    text-align: left;
+
+    .control {
+        width: 35px;
+        height: 35px;
+        line-height: 28px;
+        font-size: 22px;
+        text-align: center;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        border-radius: 50%;
+        border: 1px solid @grayC6;
+        background-color: @grayF5;
+        color: @grayC6;
+
+        &:hover {
+            color: @white;
+            background-color: @blueLight;
+            border-color: @blueDark;
+        }
+    }
+}
+
+.form-control {
+    border-color: @grayDF;
+    width: 100%;
+    line-height: 33px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 20px;
+    height: auto;
+    outline: none;
+    .border-radius(0);
+}
+
 @media (max-width: @screen-xs-max) {
     .wrapper {
         margin: 0;
+    }
+
+    .block-grey {
+        padding: 15px 10px;
+        font-size: 14px;
+
+        &-b {
+            padding-bottom: 0;
+        }
+    }
+
+    .table {
+        .col1 {
+            width: 60%;
+        }
     }
 
     h1 {

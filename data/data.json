@@ -4,10 +4,14 @@
     "person": {
         "name": "Shved Dmytro",
         "dob": "05/11/1997",
-        "email": "shveddmutro@gmail.com",
         "jobTitle": "Lead Front End Developer",
+        "address": "Berlin, Germany",
+        "email": "shveddmutro@gmail.com",
         "photo": "/media/photo.png",
-        "phone": "+4915207286263"
+        "phone": "+4915207286263",
+        "website": "shveddmutro.github.io",
+        "skype": "shveddimast",
+        "cv": "/data/cv.pdf"
     },
     "social": {
         "facebook": "https://www.facebook.com/shved.dmytro",
@@ -25,6 +29,83 @@
     "copyright": "Copyright © 2016 All right reserved",
     "profile": {
         "title": "Profile",
-        "subTitle": "A Brief About Me"
+        "subTitle": "A Brief About Me",
+        "content": {
+            "title": "Hello, I am Front End developer",
+            "txt": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseruntmollit anim id est laborum.</p>"
+        }
+    },
+    "labels": {
+        "name": "Name",
+        "dob": "Date of birth",
+        "email": "E-mail",
+        "phone": "Phone",
+        "website": "Website",
+        "downloadCv": "Download CV",
+        "company": "Company",
+        "address": "Address",
+        "period": "Period",
+        "position": "Position",
+        "level": "Level",
+        "work": "Work",
+        "education": "Education",
+        "skype": "Skype",
+        "message": "Message",
+        "sendMessage": "Send Message",
+        "professionalSkills": "Professional skills",
+        "additionalSkills": "Additional Skills"
+    },
+    "resume": {
+        "title": "Resume",
+        "subTitle": "My Qualifications",
+        "work": [
+            {
+                "name": "A.T.U",
+                "address": "Berlin, Germany",
+                "period": "August 2016 - Present",
+                "position": "Lead Front End developer",
+                "desc": "text"
+            },
+            {
+                "name": "Edition lingerie",
+                "address": "Berlin, Germany",
+                "period": "April 2016 - July 2016",
+                "position": "Senior Front End developer",
+                "desc": "text"
+            }
+        ],
+        "education": [
+            {
+                "name": "Yuri Fedkovich National University",
+                "address": "Chernivtsi, Ukraine",
+                "period": "2004 - 2009",
+                "position": "Specialist",
+                "desc": "text"
+            }
+        ],
+        "skills": [
+            {
+                "name": "JavaScript",
+                "level": "90"
+            }
+        ],
+        "additionalSkills": [
+            {
+                "name": "Communication",
+                "level": "80"
+            },
+            {
+                "name": "English",
+                "level": "70"
+            },
+            {
+                "name": "Humor",
+                "level": "80"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact",
+        "subTitle": "Get in touch with me"
     }
 }

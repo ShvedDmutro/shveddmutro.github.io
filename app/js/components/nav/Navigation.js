@@ -10,7 +10,7 @@ const Navigation = ({ navigation }) => (
                 <div className="col-xs-12">
                     {
                         navigation.map((item, index) => (
-                            <Link to={ item.type } key={ index }>
+                            <Link to={ `${item.type}` } key={ index }>
                                 <div className={ `nav-item-box ${item.type}` }>
                                     {
                                         <Item type={ item.type } />

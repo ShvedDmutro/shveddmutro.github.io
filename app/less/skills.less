@@ -1,0 +1,54 @@
+// ------------------------------------
+//  Skills section styles
+// ------------------------------------
+
+.skills {
+    border-top: 1px solid @grayED;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .title {
+        font-weight: 600;
+        margin: 0 0 25px;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 300;
+    }
+
+    .progress {
+        background-color: @grayF5;
+        border: 1px solid @grayDF;
+        height: 10px;
+        margin-bottom: 24px;
+        overflow: visible;
+        .border-radius(0);
+
+        .progress-bar {
+            background-color: @blueLight;
+            border-color: @blueLight;
+            position: relative;
+
+            span {
+                color: @black;
+                background: @white;
+                border: 1px solid @grayD6;
+                display: block;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                font-weight: 300;
+                position: absolute;
+                top: -16px;
+                right: -20px;
+                .border-radius(50%);
+            }
+        }
+    }
+}
+
+
