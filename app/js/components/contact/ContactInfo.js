@@ -24,7 +24,7 @@ const ContactInfo = ({ labels, data, social }) => (
             </tr>
             <tr>
                 <td><strong>{ labels.skype }</strong></td>
-                <td>{ data.skype }</td>
+                <td><a href={ `skype:${data.skype}` }>{ data.skype }</a></td>
             </tr>
             <tr>
                 <td><strong>{ labels.website }</strong></td>

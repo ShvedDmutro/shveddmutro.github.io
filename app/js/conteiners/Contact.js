@@ -5,10 +5,27 @@ import { connect } from 'react-redux';
 import ContactInfo from '../components/contact/ContactInfo';
 import ContactForm from '../components/contact/ContactForm';
 
+import { updateField, validateField, validateFields } from '../actions/contact';
+
 class Contact extends Component {
 
-    onSubmit() {
+    onSubmit(event) {
+        this.validateForm();
+        if (!this.props.data.contact.valid) {
+            event.preventDefault();
+        }
+    }
 
+    onFieldChange(index, value) {
+        this.props.dispatch(updateField(index, value));
+    }
+
+    onFieldBlur(index) {
+        this.props.dispatch(validateField(index));
+    }
+
+    validateForm() {
+        this.props.dispatch(validateFields());
     }
 
     render() {
@@ -36,8 +53,12 @@ class Contact extends Component {
                                 <br className="visible-sm visible-xs" />
                                 <h3 className="title">Contact form</h3>
                                 <ContactForm
+                                    fields={ contactData.fields }
                                     labels={ labels }
-                                    onSubmit={ this.onSubmit }
+                                    message={ this.props.data.contact.message }
+                                    onSubmit={ this.onSubmit.bind(this) }
+                                    onFieldChange= { this.onFieldChange.bind(this) }
+                                    onFieldBlur= { this.onFieldBlur.bind(this) }
                                 />
                             </div>
                         </div>

@@ -1,30 +1,41 @@
 import  React from 'react';
+import Field from '../form/Field';
 
-const ContactForm = ({ labels, onSubmit }) => (
+const ContactForm = ({ fields, message, labels, onSubmit, onFieldChange, onFieldBlur }) => (
     <div>
-        <div className="form-group has-error">
-            <input type="text" className="form-control " placeholder={ labels.name } />
-        </div>
-        <div className="form-group">
-            <input type="email" className="form-control" placeholder={ labels.email } />
-        </div>
-        <div className="form-group">
-            <textarea className="form-control" rows="2" placeholder={ labels.message } />
-        </div>
+
+        {
+            fields.map((field, index) => {
+                return (
+                    <Field
+                        key={ index }
+                        data={ field }
+                        index={ index }
+                        onChange={ onFieldChange }
+                        onBlur={ onFieldBlur }
+                    />
+                )
+            })
+        }
+
         <div className="form-group text-right">
-            <button
+            <a
                 className="btn btn-color hover-animate"
                 onClick={ onSubmit }
+                href={ message }
             >
                 { labels.sendMessage }
-            </button>
+            </a>
         </div>
     </div>
 );
 
 ContactForm.propTypes = {
+    fields: React.PropTypes.array.isRequired,
     labels: React.PropTypes.object.isRequired,
     onSubmit: React.PropTypes.func.isRequired,
+    onFieldChange: React.PropTypes.func.isRequired,
+    onFieldBlur: React.PropTypes.func.isRequired,
 };
 
 export default ContactForm;

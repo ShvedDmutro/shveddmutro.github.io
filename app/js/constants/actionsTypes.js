@@ -1,2 +1,4 @@
 export const UPDATE_STORE_DATA = 'UPDATE_STORE_DATA';
-export const SOME = 'SOME';
+export const UPDATE_FIELD = 'UPDATE_FIELD';
+export const VALIDATE_FIELD = 'VALIDATE_FIELD';
+export const VALIDATE_FIELDS = 'VALIDATE_FIELDS';

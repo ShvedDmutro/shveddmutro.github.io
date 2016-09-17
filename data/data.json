@@ -23,7 +23,6 @@
     "navigation": [
         {"title": "Profile", "type": "profile"},
         {"title": "Resume", "type": "resume"},
-        {"title": "Blog", "type": "blog"},
         {"title": "Contact", "type": "contact"}
     ],
     "copyright": "Copyright © 2016 All right reserved",
@@ -106,6 +105,24 @@
     },
     "contact": {
         "title": "Contact",
-        "subTitle": "Get in touch with me"
+        "subTitle": "Get in touch with me",
+        "valid": true,
+        "message": "",
+        "fields": [
+            {
+                "type": "text",
+                "value": "",
+                "placeholder": "Subject",
+                "error": "Please Enter Subject",
+                "valid": true
+            },
+            {
+                "type": "area",
+                "value": "",
+                "placeholder": "Message",
+                "error": "Please Enter Message",
+                "valid": true
+            }
+        ]
     }
 }

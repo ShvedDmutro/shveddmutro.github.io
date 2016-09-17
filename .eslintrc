@@ -20,6 +20,7 @@
         "react/jsx-curly-spacing": [2, "always"],
         "indent": ["error", 4],
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-        "max-len": ["error", 120]
+        "max-len": ["error", 120],
+        "react/jsx-indent-props": [2, 4]
     }
 }
