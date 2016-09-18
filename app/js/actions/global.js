@@ -1,3 +1,5 @@
+import 'whatwg-fetch';
+
 import * as types from '../constants/actionsTypes';
 
 const updateStoreData = (data) => ({
