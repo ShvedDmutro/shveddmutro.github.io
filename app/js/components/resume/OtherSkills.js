@@ -10,13 +10,13 @@ const OtherSkills = ({ data }) => (
                     <label className="progress-bar-label">{ item.name }</label>
                     <span className="stars">
                         {
-                            [...Array(parseInt(item.level))].map((el, i) => (
+                            [...Array(parseInt(item.level, 10))].map((el, i) => (
                                 <span className="star full" key={ i }><Star /></span>
                             ))
                         }
 
                         {
-                            [...Array(5 - parseInt(item.level))].map((el, i) => (
+                            [...Array(5 - parseInt(item.level, 10))].map((el, i) => (
                                 <span className="star empty" key={ i }><StarEmpty /></span>
                             ))
                         }

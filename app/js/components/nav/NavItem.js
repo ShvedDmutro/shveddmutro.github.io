@@ -17,6 +17,8 @@ const NavItem = ({ type }) => {
     case 'contact':
         Icon = <ContactIcon />;
         break;
+    default:
+        break;
     }
 
     return (

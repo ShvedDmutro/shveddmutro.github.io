@@ -1,4 +1,4 @@
-import  React from 'react';
+import React from 'react';
 
 const Skills = ({ data }) => (
     <div>
@@ -7,7 +7,7 @@ const Skills = ({ data }) => (
                 <div key={ index }>
                     <label>{ item.name }</label>
                     <div className="progress">
-                        <div className="progress-bar" style={{width: item.level + '%'}}>
+                        <div className="progress-bar" style={ { width: `${item.level}%` } }>
                             <span>{ item.level }%</span>
                         </div>
                     </div>

@@ -22,9 +22,9 @@ class App extends Component {
                 { this.props.children }
 
                 <Footer
-                  email={ this.props.data.person.email }
-                  phone={ this.props.data.person.phone }
-                  copyright={ this.props.data.copyright }
+                    email={ this.props.data.person.email }
+                    phone={ this.props.data.person.phone }
+                    copyright={ this.props.data.copyright }
                 />
             </main>
         );

@@ -1,11 +1,11 @@
-import  React, { Component } from 'react';
+import React, { Component } from 'react';
 
 class Field extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            valid: true
-        }
+            valid: true,
+        };
     }
 
     onBlur(index) {
@@ -20,9 +20,9 @@ class Field extends Component {
         const data = this.props.data;
         const errorClass = data.valid ? '' : 'has-error';
         const className = `form-group ${errorClass}`;
-
+        let field;
         if (data.type === 'area') {
-            return (
+            field = (
                 <div className={ className }>
                     <textarea
                         className="form-control"
@@ -33,9 +33,9 @@ class Field extends Component {
                         onChange={ this.onChange.bind(this, this.props.index) }
                     />
                 </div>
-            )
+            );
         } else {
-            return (
+            field = (
                 <div className={ className }>
                     <input
                         type={ data.type }
@@ -46,9 +46,17 @@ class Field extends Component {
                         onChange={ this.onChange.bind(this, this.props.index) }
                     />
                 </div>
-            )
+            );
         }
+        return field;
     }
 }
+
+Field.propTypes = {
+    data: React.PropTypes.object,
+    index: React.PropTypes.number.isRequired,
+    onChange: React.PropTypes.func.isRequired,
+    onBlur: React.PropTypes.func.isRequired,
+};
 
 export default Field;

@@ -7,8 +7,8 @@ import Navigation from '../components/nav/Navigation';
 const Home = ({ data }) => (
     <div>
         <HomeHeader
-          person={ data.person }
-          social={ data.social }
+            person={ data.person }
+            social={ data.social }
         />
 
         <Navigation navigation={ data.navigation } />

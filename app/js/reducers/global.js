@@ -7,36 +7,33 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+    const store = state;
     switch (action.type) {
+
     case types.UPDATE_STORE_DATA:
         return {
             ...state,
             ...action.data,
         };
 
-    case types.UPDATE_FIELD:
-        let mutations = state;
-        mutations.contact.fields[action.index].value = action.value;
-        return Object.assign({}, state, mutations);
+    case types.UPDATE_FIELD: {
+        store.contact.fields[action.index].value = action.value;
+        return Object.assign({}, store);
+    }
 
-    case types.VALIDATE_FIELD:
-        let mutations1 = state;
-        let field = mutations1.contact.fields[action.index];
+    case types.VALIDATE_FIELD: {
+        const field = store.contact.fields[action.index];
         field.valid = isValidField(field.value, field.type);
-        return Object.assign({}, state, mutations1);
+        return Object.assign({}, store);
+    }
 
-    case types.VALIDATE_FIELDS:
-        let mutations2 = state;
-        const res = validateFields(state.contact.fields);
-        mutations2.contact.fields = res.fields;
-        mutations2.contact.valid = res.valid;
-        mutations2.contact.message = `mailto:${state.person.email}?subject=${res.fields[0].value}&body=${res.fields[1].value}`;
-        return Object.assign(
-            {},
-            state,
-            mutations2
-        );
-
+    case types.VALIDATE_FIELDS: {
+        const res = validateFields(store.contact.fields);
+        store.contact.fields = res.fields;
+        store.contact.valid = res.valid;
+        store.contact.message = `mailto:${store.person.email}?subject=${res.fields[0].value}&body=${res.fields[1].value}`;
+        return Object.assign({}, store);
+    }
     default:
         return state;
     }

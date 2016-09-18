@@ -24,7 +24,7 @@ ReactDOM.render(
     <Provider store={ store }>
         <Router history={ history }>
             <Route path="/" component={ App }>
-                <IndexRoute component={ HomePage }/>
+                <IndexRoute component={ HomePage } />
                 <Route path="profile" component={ ProfilePage } />
                 <Route path="resume" component={ ResumePage } />
                 <Route path="contact" component={ ContactPage } />

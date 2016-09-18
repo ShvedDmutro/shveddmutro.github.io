@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server  --progress",
     "build": "webpack",
-    "test:lint": "./node_modules/.bin/eslint ./app/js/components/**/*.js",
+    "test:lint": "./node_modules/.bin/eslint app",
     "test:styles": "./node_modules/.bin/stylelint ./app/less/**/*.less"
   },
   "repository": {

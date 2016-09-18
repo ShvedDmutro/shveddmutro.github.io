@@ -1,6 +1,4 @@
-export const isEmpty = (val) => {
-    return val.trim() === '';
-};
+export const isEmpty = (val) => val.trim() === '';
 
 export const isEmail = (val) => {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,14 +12,15 @@ export const isValidField = (value, type) => {
     return !isEmpty(value);
 };
 
-export const validateFields = (fields) => {
+export const validateFields = (data) => {
+    const fields = data;
     const notValidFields = fields.filter((field, index) => {
         fields[index].valid = isValidField(field.value, field.type);
         return !field.valid;
     });
     return {
         valid: !notValidFields.length > 0,
-        fields: fields,
-    }
+        fields,
+    };
 };
 

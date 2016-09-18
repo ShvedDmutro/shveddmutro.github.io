@@ -1,27 +1,27 @@
-import  React from 'react';
-import LeftIcon from "react-icons/lib/fa/angle-left";
-import RightIcon from "react-icons/lib/fa/angle-right";
+import React from 'react';
+import LeftIcon from 'react-icons/lib/fa/angle-left';
+import RightIcon from 'react-icons/lib/fa/angle-right';
 
 const Info = ({ data, labels, onNext, onPrev, showArrows }) => (
     <div className="block-grey">
         <table className="table no-borders">
             <tbody>
-            <tr>
-                <td><strong>{ labels.name }</strong></td>
-                <td className="col1">{ data.name }</td>
-            </tr>
-            <tr>
-                <td><strong>{ labels.address }</strong></td>
-                <td>{ data.address }</td>
-            </tr>
-            <tr>
-                <td><strong>{ labels.period }</strong></td>
-                <td>{ data.period }</td>
-            </tr>
-            <tr>
-                <td><strong>{ labels.position }</strong></td>
-                <td>{ data.position }</td>
-            </tr>
+                <tr>
+                    <td><strong>{ labels.name }</strong></td>
+                    <td className="col1">{ data.name }</td>
+                </tr>
+                <tr>
+                    <td><strong>{ labels.address }</strong></td>
+                    <td>{ data.address }</td>
+                </tr>
+                <tr>
+                    <td><strong>{ labels.period }</strong></td>
+                    <td>{ data.period }</td>
+                </tr>
+                <tr>
+                    <td><strong>{ labels.position }</strong></td>
+                    <td>{ data.position }</td>
+                </tr>
             </tbody>
         </table>
         <div className="desc">

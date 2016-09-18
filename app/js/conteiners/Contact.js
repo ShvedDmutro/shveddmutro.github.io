@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Icon from '../components/nav/NavItem';
 import Header from '../components/header/Header';
-import { connect } from 'react-redux';
 import ContactInfo from '../components/contact/ContactInfo';
 import ContactForm from '../components/contact/ContactForm';
 
@@ -57,8 +57,8 @@ class Contact extends Component {
                                     labels={ labels }
                                     message={ this.props.data.contact.message }
                                     onSubmit={ this.onSubmit.bind(this) }
-                                    onFieldChange= { this.onFieldChange.bind(this) }
-                                    onFieldBlur= { this.onFieldBlur.bind(this) }
+                                    onFieldChange={ this.onFieldChange.bind(this) }
+                                    onFieldBlur={ this.onFieldBlur.bind(this) }
                                 />
                             </div>
                         </div>
@@ -68,5 +68,10 @@ class Contact extends Component {
         );
     }
 }
+
+Contact.propTypes = {
+    data: React.PropTypes.object,
+    dispatch: React.PropTypes.func,
+};
 
 export default connect(state => state)(Contact);

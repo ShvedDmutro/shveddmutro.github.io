@@ -12,28 +12,30 @@ class Resume extends Component {
 
         this.state = {
             workIndex: 0,
-            educationIndex: 0
-        }
+            educationIndex: 0,
+        };
     }
 
     onNext(type) {
         const data = this.props.data.resume[type];
-        let state = this.state;
-        let index = this.state[type + 'Index'] + 1;
+        const state = this.state;
+        const prop = `${type}Index`;
+        let index = this.state[prop] + 1;
 
         index = data[index] ? index : 0;
-        state[type + 'Index'] = index;
-        this.setState(state)
+        state[prop] = index;
+        this.setState(state);
     }
 
     onPrev(type) {
         const data = this.props.data.resume[type];
-        let state = this.state;
-        let index = this.state[type + 'Index'] - 1;
+        const state = this.state;
+        const prop = `${type}Index`;
+        let index = this.state[prop] - 1;
 
         index = data[index] ? index : data.length - 1;
-        state[type + 'Index'] = index;
-        this.setState(state)
+        state[prop] = index;
+        this.setState(state);
     }
 
     render() {
@@ -44,13 +46,13 @@ class Resume extends Component {
             name: labels.company,
             address: labels.address,
             period: labels.period,
-            position: labels.position
+            position: labels.position,
         };
         const labelsEducation = {
             name: labels.name,
             address: labels.address,
             period: labels.period,
-            position: labels.level
+            position: labels.level,
         };
         return (
             <div>
@@ -104,5 +106,9 @@ class Resume extends Component {
         );
     }
 }
+
+Resume.propTypes = {
+    data: React.PropTypes.object,
+};
 
 export default connect(state => state)(Resume);

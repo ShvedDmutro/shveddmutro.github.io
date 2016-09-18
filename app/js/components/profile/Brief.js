@@ -1,15 +1,15 @@
-import  React from 'react';
+import React from 'react';
 
 const Brief = ({ title, cvLink, cvLabel, content }) => (
     <div>
         <h3 className="title">{ title }</h3>
-        <div dangerouslySetInnerHTML={ {__html: content} }></div>
+        <div dangerouslySetInnerHTML={ { __html: content } } />
         <p>
             <a href={ cvLink } className="btn btn-color hover-animate" target="_blank" rel="noopener noreferrer">
                 { cvLabel }
             </a>
         </p>
-        <br/>
+        <br />
     </div>
 );
 
