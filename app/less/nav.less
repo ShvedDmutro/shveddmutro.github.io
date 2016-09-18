@@ -57,15 +57,6 @@
         color: @blueGreen;
     }
 
-    &.blog {
-        color: @orangeDirty;
-
-        .nav-icon {
-            font-size: 75px;
-            padding-top: 24px;
-        }
-    }
-
     &.profile {
         color: @pinkDark;
 
@@ -83,6 +74,16 @@
             height: 70px;
             font-size: 35px;
             padding-top: 5px;
+        }
+    }
+
+    &:hover {
+        .nav-icon {
+            border-color: @blueDark;
+            background-color: @grayE9;
+        }
+        .txt {
+            color: @blueDark;
         }
     }
 

@@ -16,7 +16,7 @@ const Header = ({ icon, title, subTitle }) => (
                 </div>
                 <div className="col-xs-4 col-sm-2 col-lg-1 text-right">
                     <div className="close-btn">
-                        <Link to="/">
+                        <Link to="/" className="hover-animate">
                             <CloseIcon />
                         </Link>
                     </div>

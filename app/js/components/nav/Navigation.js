@@ -15,7 +15,7 @@ const Navigation = ({ navigation }) => (
                                     {
                                         <Item type={ item.type } />
                                     }
-                                    <span className="txt">{ item.title }</span>
+                                    <span className="txt hover-animate">{ item.title }</span>
                                 </div>
                             </Link>
                         ))

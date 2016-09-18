@@ -31,7 +31,7 @@
         "subTitle": "A Brief About Me",
         "content": {
             "title": "Hello, I am Front End developer",
-            "txt": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseruntmollit anim id est laborum.</p>"
+            "txt": "<p>I have been developing since 2009. Have huge experience with clients from around the world. </p><p>The work I provide is of highest quality, fully responsive, and tested in a wide range of devices. I take great care to ensure each project is well-documented and easily maintainable so you can enhance a website as your company grows.<p/><p>Often front-end development of a website is overlooked, but being the part of your project that combines design, back-end development and the layer that your users interact with, from my experience, it is the most important to get right.</p><p>I create responsive websites that allow the user to experience your website in the best and most appropriate way suited to the device they are using.</p><p>My front-end build process involves the use of tools such as Sass, Less, Webpack, Grunt, Gulp, NPM... to speed up development.</p><p>I can quickly and efficiently join your team using continuous-integration with methods and tools such as Git, Agile/Scrum, and test/behaviour driven development.</p>"
         }
     },
     "labels": {
@@ -63,14 +63,70 @@
                 "address": "Berlin, Germany",
                 "period": "August 2016 - Present",
                 "position": "Lead Front End developer",
-                "desc": "text"
+                "desc": "Working with Reactjs, Redux, React Native, Webpack, javascript, HTML5/CSS3, Scrum, Providing Unit tests, JSLint, CssLint. Sprint Planing."
             },
             {
                 "name": "Edition lingerie",
                 "address": "Berlin, Germany",
-                "period": "April 2016 - July 2016",
-                "position": "Senior Front End developer",
-                "desc": "text"
+                "period": "March 2016 - July 2016",
+                "position": "Senior Javascript developer",
+                "desc": "Worked with React, Redux, Flux, javascript, jquery, HTML5/CSS3, Scrum"
+            },
+            {
+                "name": "Rebelmouse",
+                "address": "Chernivtsi, Ukraine",
+                "period": "March 2015 – February 2016",
+                "position": "Javascript Developer",
+                "desc": "Worked with Backbone.js, Underscore.js, Musthche templates. Developed new features for project."
+            },
+            {
+                "name": "Svitla Systems",
+                "address": "Kiev, Ukraine",
+                "period": "November 2014 – March 2015",
+                "position": "Senior WEB Developer",
+                "desc": "Monthly Sprint team Lead. Worked with Javascript, Developed huge list of jQuery plugins, Underscore templates, Google maps and so on."
+            },
+            {
+                "name": "Tacme",
+                "address": "Dubai, UAE",
+                "period": "December 2013 - November 2014",
+                "position": "Senior Web Developer",
+                "desc": "Working with Html5, CSS3, Javascript, Responsive design, Offline Web Application, Twitter Bootstrap, Google Maps, Social Networks, Json, Ajax."
+            },
+            {
+                "name": "Svitla Systems",
+                "address": "Kiev, Ukraine",
+                "period": "October 2013 – December 2013",
+                "position": "Senior Javascript Developer",
+                "desc": "Worked with Javascript, Developed huge list of jQuery plugins"
+            },
+            {
+                "name": "Svitla Systems",
+                "address": "Kiev, Ukraine",
+                "period": "November 2012 – September 2013",
+                "position": "Front-End Lead Developer",
+                "desc": "Team Managing, SCRUM, Javascript, HTML5, CSS3"
+            },
+            {
+                "name": "Tacme",
+                "address": "Dubai, OAE",
+                "period": "August 2012 – November 2012",
+                "position": "Senior Web Developer",
+                "desc": "Short on-site position. Front-end development (HTML, CSS, Javascript including jQuery, Ajax, Json), RTL Web Support. Google Maps"
+            },
+            {
+                "name": "Svitla Systems",
+                "address": "Chernivtsi, Ukraine",
+                "period": "September 2011 – August 2012",
+                "position": "Front-End Developer",
+                "desc": "Develop standards-compliant web pages using: HTML, XHTML, CSS. JavaScript, jQuery, ajax. Wordpress integration."
+            },
+            {
+                "name": "OSF Global Service",
+                "address": "Chernivtsi, Ukraine",
+                "period": "2010 - September 2011",
+                "position": "Front-End Developer",
+                "desc": "Develop standards-compliant web pages using: HTML, XHTML, CSS. JavaScript, jQuery, ajax. Wordpress integration."
             }
         ],
         "education": [
@@ -86,20 +142,84 @@
             {
                 "name": "JavaScript",
                 "level": "90"
+            },
+            {
+                "name": "React, Redux",
+                "level": "90"
+            },
+            {
+                "name": "React Native",
+                "level": "40"
+            },
+            {
+                "name": "Webpack",
+                "level": "80"
+            },
+            {
+                "name": "HTML5/CSS3",
+                "level": "90"
+            },
+            {
+                "name": "Sass/ess",
+                "level": "85"
+            },
+            {
+                "name": "Twitter bootstrap",
+                "level": "99"
+            },
+            {
+                "name": "Underscore.js",
+                "level": "81"
+            },
+            {
+                "name": "Grunt/Gulp",
+                "level": "83"
+            },
+            {
+                "name": "Angular.js",
+                "level": "75"
+            },
+            {
+                "name": "Backbone.js",
+                "level": "83"
+            },
+            {
+                "name": "Git/SVN",
+                "level": "89"
+            },
+            {
+                "name": "Wordpress",
+                "level": "75"
+            },
+            {
+                "name": "jQuery",
+                "level": "93"
             }
         ],
         "additionalSkills": [
             {
                 "name": "Communication",
-                "level": "80"
+                "level": "5"
+            },
+            {
+                "name": "Team Management",
+                "level": "4"
+            },
+            {
+                "name": "Team Member",
+                "level": "5"
+            },
+            {
+                "name": "Scrum",
+                "level": "4"
             },
             {
                 "name": "English",
-                "level": "70"
+                "level": "4"
             },
             {
                 "name": "Humor",
-                "level": "80"
+                "level": "5"
             }
         ]
     },

@@ -49,6 +49,41 @@
             }
         }
     }
+    .other-skills {
+        .progress {
+            height: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            &:hover {
+                background-color: @blueLight;
+                color: @white;
+
+                .star {
+                    color: @white;
+                }
+            }
+        }
+        .progress-bar-label {
+            margin-left: 20px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+    .stars {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        color: @grayC6;
+        font-size: 20px;
+        line-height: 1;
+
+        .full {
+            color: @blueLight;
+        }
+
+    }
 }
 
 

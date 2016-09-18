@@ -4,6 +4,7 @@ import Icon from '../components/nav/NavItem';
 import Header from '../components/header/Header';
 import Info from '../components/resume/Info';
 import Skills from '../components/resume/Skills';
+import OtherSkills from '../components/resume/OtherSkills';
 
 class Resume extends Component {
     constructor(props) {
@@ -92,7 +93,9 @@ class Resume extends Component {
                             <div className="col-xs-12 col-sm-6">
                                 <br className="visible-xs" />
                                 <h3 className="title">{ labels.additionalSkills }</h3>
-                                <Skills data={ resumeData.additionalSkills } />
+                                <div className="other-skills">
+                                    <OtherSkills data={ resumeData.additionalSkills } />
+                                </div>
                             </div>
                         </div>
                     </div>
