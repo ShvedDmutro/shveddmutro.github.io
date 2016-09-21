@@ -37,8 +37,4 @@ App.propTypes = {
     children: React.PropTypes.element,
 };
 
-// const selector = state => ({
-// data: state
-// });
-
 export default connect(state => state)(App);

@@ -3,7 +3,7 @@
 // ------------------------------------
 
 .footer {
-    line-height: 36px;
+    line-height: 1.4;
     padding: 17px 0;
     border-top: 1px solid @grayC6;
 
@@ -32,17 +32,32 @@
         }
     }
 
+    .facebook,
+    .github {
+        display: inline-block;
+    }
+
+    .github {
+        position: relative;
+        top: 8px;
+    }
+
+    .facebook {
+        padding-right: 20px;
+    }
+
     .copyright {
         color: @grayC6;
         float: right;
+        line-height: 40px;
     }
 
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
         text-align: center;
 
         .footer-item {
             display: block;
-            margin: 0;
+            margin: 0 0 10px;
         }
 
         .copyright {
