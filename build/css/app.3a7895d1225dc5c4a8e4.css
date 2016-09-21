@@ -3497,7 +3497,7 @@ textarea.form-control {
 }
 
 .footer {
-  line-height: 36px;
+  line-height: 1.4;
   padding: 17px 0;
   border-top: 1px solid #c6c6c6;
 }
@@ -3525,19 +3525,33 @@ textarea.form-control {
   background-color: #00b6f9;
 }
 
+.footer .facebook,.footer .github {
+  display: inline-block;
+}
+
+.footer .github {
+  position: relative;
+  top: 8px;
+}
+
+.footer .facebook {
+  padding-right: 20px;
+}
+
 .footer .copyright {
   color: #c6c6c6;
   float: right;
+  line-height: 40px;
 }
 
-@media (max-width:767px) {
+@media (max-width:991px) {
   .footer {
     text-align: center;
   }
 
   .footer .footer-item {
     display: block;
-    margin: 0;
+    margin: 0 0 10px;
   }
 
   .footer .copyright {
@@ -3629,4 +3643,4 @@ textarea.form-control {
 .skills .stars .full {
   color: #00b6f9;
 }
-/*# sourceMappingURL=app.4476e382d4334ec9ac04.css.map*/
+/*# sourceMappingURL=app.3a7895d1225dc5c4a8e4.css.map*/
