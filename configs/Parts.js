@@ -50,7 +50,7 @@ exports.setupLess = function(paths) {
             loaders: [
                 {
                     test: /\.less$/,
-                    loaders: ['style', 'css', 'less'],
+                    loaders: ['style?sourceMap', 'css?sourceMap', 'less?sourceMap'],
                     include: paths
                 }
             ]
@@ -99,9 +99,13 @@ exports.fonts = function(path) {
     return {
         module: {
             loaders: [
+                // {
+                //     test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                //     loader: 'file-loader?name=' + path + '/[hash].[ext]'
+                // }
                 {
-                    test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                    loader: 'file-loader?name=' + path + '/[hash].[ext]'
+                    test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+                    loader: 'url-loader'
                 }
             ]
         }
