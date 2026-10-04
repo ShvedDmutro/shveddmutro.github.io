@@ -63,7 +63,7 @@ const [first, last] = person.name.split(' ');
       <div>
         {experience.map((job) => (
           <div class="job">
-            <p class="jt">{job.title}, {job.org}; {job.period}</p>
+            <p class="jt"><b>{job.title}</b>, {job.org}; <span class="per">{job.period}</span></p>
             {job.lead && <p>{job.lead}</p>}
             {job.points && <ul>{job.points.map((pt) => <li>{pt.strong && <><b>{pt.strong}</b> — </>}{pt.text}</li>)}</ul>}
             {job.summary && <p>{job.summary}</p>}
@@ -79,37 +79,40 @@ const [first, last] = person.name.split(' ');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #222; font-size: 8.6pt; line-height: 1.5; max-width: 210mm; margin: 0 auto;
+    --ink: #1c1c1e; --accent: #1f4e79; --sub: #4a5260; --line: #d9dde3; --zebra: #f2f4f7;
+    color: var(--ink); font-size: 8.6pt; line-height: 1.5; max-width: 210mm; margin: 0 auto;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   @media screen { body { padding: 16mm 14mm; } }
-  a { color: #1a5fb4; text-decoration: underline; text-underline-offset: 1.5px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 1.5px; }
 
   .head { display: flex; justify-content: space-between; align-items: flex-start; margin: 4mm 0 8mm; }
-  h1 { font-size: 40pt; font-weight: 700; line-height: 1; letter-spacing: -0.01em; color: #555; margin-left: 2mm; }
+  h1 { font-size: 40pt; font-weight: 700; line-height: 1; letter-spacing: -0.01em; color: #2b2f36; margin-left: 2mm; }
   .contact { border-collapse: collapse; font-size: 7.6pt; width: 82mm; }
-  .contact th, .contact td { text-align: left; padding: 4px 8px; vertical-align: top; color: #444; }
-  .contact th { font-weight: 400; color: #8a8a8a; width: 24mm; }
-  .contact tr:nth-child(even) { background: #ededed; }
-  .contact tr:first-child { border-top: 1px solid #ddd; }
+  .contact th, .contact td { text-align: left; padding: 4px 8px; vertical-align: top; color: var(--ink); }
+  .contact th { font-weight: 500; color: var(--sub); width: 24mm; }
+  .contact tr:nth-child(even) { background: var(--zebra); }
+  .contact tr:first-child { border-top: 2px solid var(--accent); }
 
   .row { display: grid; grid-template-columns: 32mm 1fr; gap: 0 4mm; margin-bottom: 5.5mm; break-inside: avoid; }
   .row.exp { break-before: page; break-inside: auto; }
-  h2 { font-size: 8.6pt; font-weight: 700; color: #8a8a8a; }
+  h2 { font-size: 8.6pt; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
   p { margin-bottom: 2px; }
   b { font-weight: 700; }
   ul { list-style: none; }
   li { margin-bottom: 1.5px; }
-  li::before { content: '– '; }
+  li::before { content: '– '; color: var(--accent); }
 
   .skills { border-collapse: collapse; width: 100%; font-size: 8pt; }
-  .skills thead th { background: #b8b8b8; color: #fff; font-weight: 500; text-transform: uppercase; text-align: left; padding: 5px 8px; letter-spacing: 0.02em; }
-  .skills td { padding: 4.5px 8px; vertical-align: middle; color: #333; }
-  .skills tbody tr:nth-child(even) { background: #f0f0f0; }
+  .skills thead th { background: var(--accent); color: #fff; font-weight: 500; text-transform: uppercase; text-align: left; padding: 5px 8px; letter-spacing: 0.02em; }
+  .skills td { padding: 4.5px 8px; vertical-align: middle; color: var(--ink); }
+  .skills tbody tr:nth-child(even) { background: var(--zebra); }
   .skills th:nth-child(1), .skills td:nth-child(1) { width: 47%; }
-  .also { font-size: 7.6pt; color: #888; margin-top: 6px; }
+  .also { font-size: 7.6pt; color: var(--sub); margin-top: 6px; }
 
   .exp { font-size: 8.3pt; line-height: 1.42; }
   .job { margin-bottom: 3mm; break-inside: avoid; }
-  .jt { color: #8a8a8a; margin-bottom: 1px; }
+  .jt { color: var(--sub); margin-bottom: 1px; }
+  .jt b { color: var(--accent); }
+  .per { white-space: nowrap; }
 </style>
