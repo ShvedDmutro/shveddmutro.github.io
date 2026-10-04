@@ -1,14 +1,17 @@
 ---
-title: "Run your AI coding agent like a team, not a genie"
-description: "Lead, builders, helpers and a reviewer: how I split work between models."
+title: "Treat your AI coding agent like a teammate, not a genie"
+description: "You lead, the agent builds, the tests prove it."
 date: 2026-10-04
 tags: ["AI coding"]
 cover: ../../assets/blog/06-team-not-genie.png
-coverAlt: "Run your AI coding agent like a team, not a genie"
+coverAlt: "Treat your AI coding agent like a teammate, not a genie"
 draft: true
 ---
-I stopped treating my AI coding agent like a genie. Now I run it like a small team.
 
-A strong model leads and checks. Cheaper models build. The cheapest one only runs tests. The reviewer is always strong, because a cheap reviewer gives you confident noise.
+I stopped treating my AI coding agent like a genie. Now I treat it like a fast new teammate with no memory.
 
-And when any of them says "done", I treat it as a claim, not proof.
+A genie gets a wish, and you hope. A teammate gets a clear task, does the work, and shows you the result.
+
+So my job changed. Less typing. More deciding what to build, explaining it clearly, and checking what comes back.
+
+And when the agent says "done", I treat it as a claim, not proof.

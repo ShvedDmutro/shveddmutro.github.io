@@ -116,5 +116,5 @@ export const education = 'Yuriy Fedkovych Chernivtsi National University';
 
 export const playbook = {
   title: 'The AI Coding Playbook',
-  text: 'How to run AI coding agents like a team, not a genie. Task contracts, model choice, root-cause fixes, reviews that must prove their findings, and the red flags that tell you to stop. 22 pages, plain words.',
+  text: 'How to work with AI coding agents like a team, not a genie. Clear tasks, checking the results, fixing causes instead of symptoms, reviews that must prove their findings, and the red flags that tell you to stop. 15 pages, plain words.',
 };

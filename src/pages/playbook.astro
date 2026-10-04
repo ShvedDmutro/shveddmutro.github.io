@@ -4,19 +4,18 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Playbook from '../components/Playbook.astro';
 const chapters = [
-  'The one idea', 'Where the rules live', 'Match the process to the task', 'Step 0: the brief',
-  'Look before you build', 'The task contract', 'Never accept “done”', 'Picking the model',
-  'Root cause, not loops', 'A bug is a shape, not a line', 'Testing', 'AI review must prove it',
-  'Memory and decisions', 'Hooks and gates', 'What to type', 'Red flags',
+  'The one idea', 'Keep the rules short', 'Match the process to the task', 'Understand before building',
+  'Write the task down', 'Never accept “done”', 'Root cause, not loops', 'Look for the twins',
+  'Testing', 'Reviews must prove it', 'Write decisions down', 'Red flags',
 ];
 ---
-<Base title="The AI Coding Playbook · Dmytro Shved" description="A free 22-page guide to running AI coding agents like a team, not a genie.">
+<Base title="The AI Coding Playbook · Dmytro Shved" description="A free 15-page guide to working with AI coding agents like a team, not a genie.">
   <Nav />
   <main>
     <Playbook />
     <section class="wrap section">
       <p class="label">Inside</p>
-      <h2>16 chapters, 22 pages.</h2>
+      <h2>12 chapters, 15 pages.</h2>
       <ol class="toc">{chapters.map((c, i) => <li><span>{String(i + 1).padStart(2, '0')}</span>{c}</li>)}</ol>
     </section>
   </main>
