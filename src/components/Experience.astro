@@ -1,21 +1,35 @@
 ---
-import { experience, person } from '../data/profile';
+import { experience, person, siteTimelineFrom } from '../data/profile';
+const recent = experience.filter((j) => j.start >= siteTimelineFrom);
+const earlier = experience.filter((j) => j.start < siteTimelineFrom);
+const earlierOrgs = [...new Set(earlier.map((j) => j.org))].join(', ');
+const earlierFrom = Math.min(...earlier.map((j) => j.start));
 ---
 <section class="wrap section" id="experience">
   <p class="label">Experience</p>
   <h2>{person.years} years of shipping software.</h2>
   <ol>
-    {experience.map((job) => (
+    {recent.map((job) => (
       <li class:list={{ highlight: job.highlight }}>
         <div class="when">{job.short}</div>
         <div>
           <h3>{job.title}</h3>
           <p class="where">{job.org}</p>
-          {job.summary && <p class="summary">{job.summary}</p>}
+          {(job.lead ?? job.summary) && <p class="summary">{job.lead ?? job.summary}</p>}
         </div>
       </li>
     ))}
+    {earlier.length > 0 && (
+      <li>
+        <div class="when">{earlierFrom} – {siteTimelineFrom}</div>
+        <div>
+          <h3>Senior front-end and JavaScript roles</h3>
+          <p class="where">{earlierOrgs}</p>
+        </div>
+      </li>
+    )}
   </ol>
+  <p class="cv"><a class="btn" href={person.cvFile} download>Download the full CV</a></p>
 </section>
 
 <style>
@@ -29,4 +43,5 @@ import { experience, person } from '../data/profile';
   .when { font-family: var(--font-mono); font-size: 14px; color: var(--muted); padding-top: 3px; }
   .where { color: var(--muted); font-size: 15px; margin-top: 2px; }
   .summary { color: var(--soft); margin-top: 8px; font-size: 15.5px; max-width: 640px; }
+  .cv { margin-top: 8px; }
 </style>
