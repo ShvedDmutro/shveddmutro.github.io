@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+---
+<Base title="Page not found · Dmytro Shved" noindex>
+  <Nav />
+  <main class="wrap nf">
+    <p class="label">404</p>
+    <h1>This page doesn't exist.</h1>
+    <div class="actions"><a class="btn primary" href="/">Go to the home page</a><a class="btn ghost" href="/blog/">Read the blog</a></div>
+  </main>
+</Base>
+
+<style>
+  .nf { padding-block: 120px; }
+  h1 { font-size: clamp(32px, 5vw, 56px); }
+</style>

@@ -1,0 +1,69 @@
+---
+// Print version of the CV. `npm run cv` turns this page into public/Dmytro-Shved-CV.pdf.
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/jetbrains-mono';
+import { person, summary, principles, experience, skills, education, playbook } from '../data/profile';
+const host = person.site.replace('https://', '');
+const linkedin = person.linkedin.replace('https://www.', '').replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{person.name} · CV</title>
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <h1>{person.name}</h1>
+        <p class="role"><span>{person.role}</span> · {person.years} years in software</p>
+      </div>
+      <p class="contact">{person.email}<br />{linkedin}<br />{host} · {person.location}</p>
+    </header>
+
+    <h2>Profile</h2>
+    <p>{summary}</p>
+    <p class="small">How I work: {principles.slice(0, 4).map((p) => p.title.replace(/\.$/, '').toLowerCase()).join('; ')}.</p>
+
+    <h2>Experience</h2>
+    {experience.map((job) => (
+      <section class="job">
+        <div class="jh"><p class="jt">{job.title} <span>· {job.org}</span></p><p class="jd">{job.period}</p></div>
+        {job.points ? <ul>{job.points.map((pt) => <li>{pt}</li>)}</ul> : job.summary && <p class="small">{job.summary}</p>}
+      </section>
+    ))}
+
+    <h2>Skills</h2>
+    <dl class="grid">{skills.map((s) => (<><dt>{s.group}</dt><dd>{s.items.join(', ')}</dd></>))}</dl>
+
+    <h2>Education</h2>
+    <p>{education}</p>
+
+    <h2>Writing</h2>
+    <p>{playbook.title}: a free guide to running AI coding agents like a team ({host}/playbook)</p>
+  </body>
+</html>
+
+<style is:global>
+  @page { size: A4; margin: 16mm 16mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter Variable', sans-serif; color: #121826; font-size: 10pt; line-height: 1.5; max-width: 210mm; margin: 0 auto; }
+  @media screen { body { padding: 16mm; } }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #121826; padding-bottom: 10px; }
+  h1 { font-family: 'Space Grotesk Variable', sans-serif; font-size: 26pt; line-height: 1; letter-spacing: -0.02em; }
+  .role { font-family: 'Space Grotesk Variable', sans-serif; font-weight: 600; font-size: 12.5pt; margin-top: 6px; }
+  .role span { background: #c6ff3d; padding: 0 4px; }
+  .contact { text-align: right; font-size: 9pt; color: #3b4559; line-height: 1.6; }
+  h2 { font-family: 'JetBrains Mono Variable', monospace; font-weight: 500; font-size: 8.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: #5a657a; margin: 16px 0 7px; }
+  p { margin-bottom: 6px; }
+  .job { margin-bottom: 10px; break-inside: avoid; }
+  .jh { display: flex; justify-content: space-between; gap: 12px; }
+  .jt { font-weight: 600; margin: 0; } .jt span { font-weight: 400; color: #3b4559; }
+  .jd { font-family: 'JetBrains Mono Variable', monospace; font-size: 8.5pt; color: #5a657a; white-space: nowrap; padding-top: 1px; margin: 0; }
+  ul { margin: 4px 0 0 16px; } li { margin-bottom: 3px; }
+  .grid { display: grid; grid-template-columns: 110px 1fr; gap: 4px 12px; } dt { font-weight: 600; }
+  .small { color: #3b4559; }
+</style>

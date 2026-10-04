@@ -1,0 +1,36 @@
+---
+import { person } from '../data/profile';
+---
+<header class="nav">
+  <div class="wrap inner">
+    <a class="brand" href="/"><span class="dot"></span>{person.name}</a>
+    <nav aria-label="Main">
+      <a href="/#work">Work</a>
+      <a href="/#experience">Experience</a>
+      <a href="/blog/">Blog</a>
+      <a href="/playbook/">Playbook</a>
+      <a href="/#contact" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(12px);
+    background: rgb(10 15 30 / 0.78);
+    border-bottom: 1px solid rgb(36 48 75 / 0.6);
+  }
+  .inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-family: var(--font-head); font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  nav {
+    display: flex; gap: 28px; align-items: center; font-size: 15px; color: var(--muted);
+    a:hover { color: var(--text); }
+  }
+  .cta {
+    color: var(--text); border: 1px solid var(--line); padding: 7px 16px; border-radius: 999px;
+    &:hover { border-color: var(--accent); }
+  }
+  @media (max-width: 860px) { nav { gap: 18px; } nav a[href="/#work"], nav a[href="/#experience"], nav a[href="/playbook/"] { display: none; } }
+</style>

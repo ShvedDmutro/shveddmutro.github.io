@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts } from '../../lib/posts';
+const posts = await getPosts();
+---
+<Base title="Blog · Dmytro Shved" description="Notes on AI agents, LLM features in products, automation and working with AI coding agents.">
+  <Nav />
+  <main class="wrap page">
+    <p class="label">Blog</p>
+    <h1>Notes from building AI in production.</h1>
+    <p class="muted">AI agents, AI inside products, automation and AI coding. <a class="rss" href="/rss.xml">RSS</a></p>
+    <div class="list">{posts.map((post) => <PostCard post={post} />)}</div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .page { padding-top: 72px; }
+  h1 { font-size: clamp(32px, 4.6vw, 52px); line-height: 1.08; max-width: 800px; }
+  .rss { color: var(--accent); }
+  .list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; @media (max-width: 860px) { grid-template-columns: 1fr; } }
+</style>

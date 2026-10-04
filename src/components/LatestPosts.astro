@@ -1,0 +1,25 @@
+---
+import PostCard from './PostCard.astro';
+import { getPosts } from '../lib/posts';
+const posts = (await getPosts()).slice(0, 3);
+---
+{posts.length > 0 && (
+  <section class="wrap section" id="writing">
+    <div class="head">
+      <div>
+        <p class="label">Writing</p>
+        <h2>Notes from building AI in production.</h2>
+      </div>
+      <a class="btn ghost" href="/blog/">All posts</a>
+    </div>
+    <div class="grid">{posts.map((post) => <PostCard post={post} />)}</div>
+  </section>
+)}
+
+<style>
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px;
+    @media (max-width: 860px) { grid-template-columns: 1fr; }
+  }
+</style>

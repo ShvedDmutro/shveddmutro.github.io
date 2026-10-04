@@ -1,0 +1,23 @@
+---
+import { skills } from '../data/profile';
+---
+<section class="wrap section split">
+  <div>
+    <p class="label">Skills</p>
+    <h2>Stack.</h2>
+  </div>
+  <div class="grid">
+    {skills.map((s) => (
+      <div class="panel group">
+        <h4>{s.group}</h4>
+        <p>{s.items.join(' · ')}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; @media (max-width: 860px) { grid-template-columns: 1fr; } }
+  .group { border-radius: 16px; padding: 20px 22px; p { color: var(--soft); font-size: 15px; } }
+  h4 { font-family: var(--font-mono); font-weight: 500; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+</style>

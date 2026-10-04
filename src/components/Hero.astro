@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import photo from '../assets/photo.jpg';
+import { person } from '../data/profile';
+---
+<section class="hero wrap" id="top">
+  <Image class="avatar" src={photo} alt={person.name} width={168} height={168} densities={[1, 2]} loading="eager" />
+  <p class="kicker"><b>{person.role}</b> · {person.years} years in software</p>
+  <h1>{person.tagline} <span class="hl">{person.taglineAccent}</span></h1>
+  <p class="lead">{person.lead}</p>
+  <div class="actions">
+    <a class="btn primary" href={`mailto:${person.email}`}>Get in touch</a>
+    <a class="btn" href={person.cvFile} download>Download CV</a>
+    <a class="btn ghost" href={person.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<style>
+  .hero { padding-block: 96px 72px; @media (max-width: 860px) { padding-top: 56px; } }
+  .avatar {
+    width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin-bottom: 28px;
+    outline: 2px solid var(--accent); outline-offset: 4px;
+  }
+  .kicker {
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    b { color: var(--accent); font-weight: 500; }
+  }
+  h1 { font-weight: 700; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.025em; margin: 20px 0 22px; max-width: 900px; }
+  .lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--soft); max-width: 640px; }
+</style>

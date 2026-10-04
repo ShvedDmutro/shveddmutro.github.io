@@ -1,0 +1,19 @@
+---
+import { person } from '../data/profile';
+---
+<section class="wrap section contact" id="contact">
+  <p class="label">Contact</p>
+  <h2>Working on something like this?</h2>
+  <p class="muted">Send me a short note about the feature or process you have in mind.</p>
+  <div class="actions">
+    <a class="btn primary" href={`mailto:${person.email}`}>{person.email}</a>
+    <a class="btn ghost" href={person.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href={person.github} target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+
+
+<style>
+  .contact { padding-bottom: 40px; }
+</style>

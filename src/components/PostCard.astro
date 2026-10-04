@@ -1,0 +1,22 @@
+---
+import type { Post } from '../lib/posts';
+import { formatDate, readingMinutes } from '../lib/posts';
+interface Props { post: Post }
+const { post } = Astro.props;
+---
+<a class="panel card" href={`/blog/${post.id}/`}>
+  <p class="meta">{formatDate(post.data.date)} · {readingMinutes(post.body)} min{post.data.draft && ' · DRAFT'}</p>
+  <h3>{post.data.title}</h3>
+  <p class="desc">{post.data.description}</p>
+  {post.data.tags.length > 0 && <p class="tags">{post.data.tags.join(' · ')}</p>}
+</a>
+
+<style>
+  .card {
+    display: flex; flex-direction: column; gap: 8px; padding: 24px 26px; transition: border-color 0.2s, transform 0.2s;
+    &:hover { border-color: var(--accent); transform: translateY(-2px); }
+  }
+  .meta, .tags { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.06em; color: var(--muted); }
+  .tags { color: var(--accent); margin-top: auto; padding-top: 6px; }
+  .desc { color: var(--soft); font-size: 15.5px; }
+</style>

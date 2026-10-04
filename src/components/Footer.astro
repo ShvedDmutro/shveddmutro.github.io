@@ -1,0 +1,21 @@
+---
+import { person } from '../data/profile';
+const year = new Date().getFullYear();
+---
+<footer class="wrap foot">
+  <span>© {year} {person.name}</span>
+  <span class="links">
+    <a href="/blog/">Blog</a>
+    <a href="/rss.xml">RSS</a>
+    <a href={person.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <a href={person.github} target="_blank" rel="noopener">GitHub</a>
+  </span>
+</footer>
+
+<style>
+  .foot {
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 14px;
+    padding-block: 40px; border-top: 1px solid var(--line); margin-top: 60px;
+  }
+  .links { display: flex; gap: 20px; a:hover { color: var(--text); } }
+</style>

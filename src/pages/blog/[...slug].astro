@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getPosts, formatDate, readingMinutes, type Post } from '../../lib/posts';
+import { person } from '../../data/profile';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1] },
+  }));
+}
+interface Props { post: Post; newer?: Post; older?: Post }
+const { post, newer, older } = Astro.props;
+const { Content } = await render(post);
+---
+<Base title={`${post.data.title} · Dmytro Shved`} description={post.data.description} image={post.data.cover?.src}>
+  <Nav />
+  <main class="wrap article">
+    <a class="back" href="/blog/">← All posts</a>
+    <p class="meta">{formatDate(post.data.date)} · {readingMinutes(post.body)} min read{post.data.tags.length > 0 && ` · ${post.data.tags.join(' · ')}`}</p>
+    <h1>{post.data.title}</h1>
+    {post.data.cover && (
+      <Image class="cover" src={post.data.cover} alt={post.data.coverAlt ?? post.data.title} widths={[540, 860]} sizes="(max-width: 900px) 100vw, 760px" />
+    )}
+    <div class="prose"><Content /></div>
+    <aside class="panel author">
+      <p><b>{person.name}</b> · {person.role}. I build AI agents, LLM features and automation for production.</p>
+      <p class="links">
+        {post.data.linkedin && <a href={post.data.linkedin} target="_blank" rel="noopener">Discuss on LinkedIn →</a>}
+        <a href="/#contact">Get in touch →</a>
+      </p>
+    </aside>
+    <nav class="pager" aria-label="More posts">
+      {older ? <a href={`/blog/${older.id}/`}>← {older.data.title}</a> : <span></span>}
+      {newer && <a class="r" href={`/blog/${newer.id}/`}>{newer.data.title} →</a>}
+    </nav>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .article { max-width: 760px; padding-top: 56px; }
+  .back { color: var(--muted); font-size: 15px; &:hover { color: var(--text); } }
+  .meta { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; color: var(--muted); margin-top: 28px; }
+  h1 { font-size: clamp(32px, 4.8vw, 50px); line-height: 1.08; margin: 12px 0 28px; }
+  .cover { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 32px; }
+  .prose {
+    font-size: 18px; line-height: 1.75; color: var(--soft);
+    :global(p), :global(ul), :global(ol) { margin-bottom: 1.1em; }
+    :global(ul), :global(ol) { padding-left: 1.3em; }
+    :global(li) { margin-bottom: 0.4em; }
+    :global(strong) { color: var(--text); }
+    :global(h2) { font-size: 28px; margin: 1.6em 0 0.6em; color: var(--text); }
+    :global(a) { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    :global(code) { font-family: var(--font-mono); font-size: 0.88em; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+    :global(pre) { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; overflow-x: auto; font-size: 15px; margin-bottom: 1.2em; }
+    :global(img) { max-width: 100%; height: auto; border-radius: 14px; }
+  }
+  .author { padding: 22px 26px; margin-top: 40px; color: var(--soft); font-size: 15.5px; b { color: var(--text); } }
+  .links { display: flex; gap: 22px; margin-top: 10px; flex-wrap: wrap; a { color: var(--accent); } }
+  .pager { display: flex; justify-content: space-between; gap: 20px; margin: 36px 0 20px; font-size: 15px; color: var(--muted); a:hover { color: var(--text); } .r { text-align: right; margin-left: auto; } }
+</style>

@@ -1,0 +1,36 @@
+---
+import { person, playbook } from '../data/profile';
+---
+<section class="wrap section" id="playbook">
+  <div class="panel feature">
+    <div>
+      <p class="label">Free guide</p>
+      <h2>{playbook.title}</h2>
+      <p class="muted">{playbook.text}</p>
+      <div class="actions"><a class="btn primary" href={person.playbookFile} target="_blank" rel="noopener">Read the playbook</a></div>
+    </div>
+    <a class="cover" href={person.playbookFile} target="_blank" rel="noopener" aria-label={`Open ${playbook.title}`}>
+      <span class="k">Free guide</span>
+      <span class="t">The AI Coding <em>Playbook.</em></span>
+      <span class="a">{person.name}</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .feature {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; border-radius: 28px; padding: 44px;
+    @media (max-width: 860px) { grid-template-columns: 1fr; padding: 28px; }
+  }
+  .cover {
+    aspect-ratio: 4 / 5; max-width: 340px; width: 100%; justify-self: center; border-radius: 18px; padding: 28px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: radial-gradient(400px 300px at 100% 0%, rgb(198 255 61 / 0.14), transparent 60%), var(--bg);
+    border: 1px solid var(--line); transition: transform 0.25s, border-color 0.25s;
+    &:hover { transform: rotate(-1deg) translateY(-3px); border-color: var(--accent); }
+  }
+  .k { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+  .t { font-family: var(--font-head); font-weight: 700; font-size: 34px; line-height: 1.02; }
+  em { font-style: normal; color: var(--accent); }
+  .a { color: var(--muted); font-size: 14px; }
+</style>
