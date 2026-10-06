@@ -9,7 +9,7 @@ draft: true
 ---
 People ask what I actually use to build with AI. This is my kit right now.
 
-Claude Code for coding. Superpowers and GSD on top of it: open-source skill sets for working carefully and for planning bigger features in phases. MCP to connect agents to real tools. Wispr Flow to dictate instead of type. n8n for things that run without me.
+Claude Code for coding, with GSD on top: an open-source workflow for planning bigger features in phases. A few custom agents for reviewing and testing. MCP to connect agents to real tools. Wispr Flow to dictate instead of type. n8n for things that run without me.
 
 In six months this list will look different. Clear tasks and checking the result will still matter.
 
