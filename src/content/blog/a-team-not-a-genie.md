@@ -1,11 +1,11 @@
 ---
 title: "Treat your AI coding agent like a teammate, not a genie"
 description: "You lead, the agent builds, the tests prove it."
-date: 2026-10-04
+date: 2026-10-12
 tags: ["AI coding"]
 cover: ../../assets/blog/06-team-not-genie.png
 coverAlt: "Treat your AI coding agent like a teammate, not a genie"
-draft: true
+draft: false
 ---
 
 I stopped treating my AI coding agent like a genie. Now I treat it like a fast new teammate with no memory.
