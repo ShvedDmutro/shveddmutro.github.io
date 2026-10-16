@@ -9,8 +9,14 @@ draft: false
 ---
 Most of the "AI agents" I've been asked to build should have been workflows.
 
-A free-running agent picks every next step itself. Great in a demo, hard to trust in production.
+An agent means the AI decides every step on its own. Looks great in a demo. In real work, it's hard to trust.
 
-For most business tasks, plain code should run the process, and AI should handle only the steps that need to understand messy human input. Predictable, testable, and much cheaper.
+Take a simple case. A customer emails: "Can I move my booking to Friday?"
 
-A real agent earns its place when the path truly can't be planned in advance.
+The agent way: the AI reads it, decides to check the calendar, decides to change the booking, decides what to reply. Any of those steps can go wrong.
+
+The workflow way: the AI only reads the email and pulls out "booking, new date Friday". Then normal code checks the date, changes the booking and sends the confirmation. Same every time.
+
+The AI does the one thing code can't: understand a messy human message. Code does the rest.
+
+A real agent is worth it only when nobody can plan the steps in advance. For most business tasks, you can.
