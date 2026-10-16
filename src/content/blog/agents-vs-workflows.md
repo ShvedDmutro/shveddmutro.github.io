@@ -1,11 +1,11 @@
 ---
 title: "Most AI agents should be workflows"
 description: "Most business tasks need plain code with a few AI steps, not a free-running agent."
-date: 2026-10-04
+date: 2026-10-16
 tags: ["Agents"]
 cover: ../../assets/blog/02-agent-vs-workflow.png
 coverAlt: "Most AI agents should be workflows"
-draft: true
+draft: false
 ---
 Most of the "AI agents" I've been asked to build should have been workflows.
 
