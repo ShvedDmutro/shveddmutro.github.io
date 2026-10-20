@@ -1,17 +1,22 @@
 ---
 title: "Talk, don't type"
 description: "My tasks for coding agents got much better when I started dictating them."
-date: 2026-10-04
+date: 2026-10-20
 tags: ["Tools", "AI coding"]
-draft: true
+draft: false
 ---
-My tasks for coding agents got much better when I stopped typing them and started dictating.
+My tasks for AI coding agents got much better when I stopped typing them and started talking.
 
-I dictate tasks to my coding agent, the same way I'd explain them to a colleague. The goal, what to be careful with, what not to touch, how we'll know it works.
+When I type, I'm lazy. I write one line:
+"Fix the signup form."
 
-When I type, I write one lazy line.
-When I talk, I give the whole picture in 30 seconds.
+When I talk, I explain it like I would to a colleague. It takes about 30 seconds:
+"The signup form lets people in with an empty email. Fix that check. Don't touch the page design, it was just approved. When you're done, try it with an empty email and show me it gets blocked."
 
-And the agent's work is only as good as the picture you give it.
+Same task. But the second one has the goal, what not to touch, and how we'll know it works.
 
-Try it for one day. Dictate every task you give your AI and see how much you used to leave out.
+The agent can only work with what you tell it. Talking makes you tell it more.
+
+I use Wispr Flow for this, but any dictation tool works.
+
+Try it for one day. Dictate every task you give your AI, and notice how much you used to leave out.
