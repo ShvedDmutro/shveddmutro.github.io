@@ -3,7 +3,7 @@ title: "The AI Coding Playbook"
 description: "A free 15-page guide to working with AI coding agents like a team, not a genie."
 date: 2026-10-04
 tags: ["AI coding"]
-draft: false
+draft: true
 ---
 
 I wrote down the habits that make AI coding agents actually useful.
