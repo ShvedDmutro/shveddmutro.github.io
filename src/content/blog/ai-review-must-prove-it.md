@@ -1,9 +1,9 @@
 ---
 title: "AI code review has to prove it"
 description: "A finding is not real until it makes a test fail."
-date: 2026-10-04
+date: 2026-11-04
 tags: ["AI coding"]
-draft: true
+draft: false
 ---
 AI code reviewers always sound sure.
 
@@ -13,6 +13,7 @@ So for bugs, my reviewer has one rule.
 A finding isn't real until it makes a test fail.
 
 It has to write the smallest test that shows the bug, run it, and show me the red result. No failing test, no bug report.
+I still read the test. But checking five lines of test is much faster than arguing with a paragraph.
 
 Not everything fits this. Design problems, security risks and race conditions still need a human to think. But for everyday bugs, it cut the noise a lot, and almost everything left is worth fixing.
 
