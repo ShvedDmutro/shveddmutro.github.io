@@ -1,9 +1,9 @@
 ---
 title: "What is a custom agent?"
 description: "A custom agent is a specialist: one job, its own instructions, limited permissions and its own model."
-date: 2026-11-03
+date: 2026-11-11
 tags: ["Agents", "AI coding"]
-draft: true
+draft: false
 ---
 Most people use one AI agent for everything. Writing code, reviewing it, testing it, writing the docs.
 
@@ -19,4 +19,4 @@ The main agent hands it a task. It does that one job in its own clean space and 
 
 Why it helps: a specialist with narrow instructions makes fewer surprising moves than a generalist with a huge prompt. And your main conversation stays focused, because the specialist's work happens somewhere else.
 
-Next: [how to make one in 10 minutes](/blog/make-a-custom-agent/).
+Next post: how to make one in 10 minutes.
